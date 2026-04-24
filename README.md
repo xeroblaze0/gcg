@@ -1,0 +1,2 @@
+# gcg
+Gundam Card Game
