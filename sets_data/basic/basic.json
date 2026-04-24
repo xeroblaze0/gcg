@@ -1,0 +1,71 @@
+[
+  {
+    "id": "R-001_p6",
+    "code": "R-001_p6",
+    "rarity": "C",
+    "name": "Resource",
+    "level": "-",
+    "cost": "-",
+    "color": "-",
+    "cardType": "RESOURCE",
+    "effect": "(Rest a Resource when paying a cost.)<br/>",
+    "zone": "-",
+    "trait": "-",
+    "link": "-",
+    "ap": "-",
+    "hp": "-",
+    "sourceTitle": "-",
+    "getIt": "Included in Starter Decks",
+    "set": {
+      "id": "included_in_starter_decks",
+      "name": "Included in Starter Decks"
+    },
+    "front_image": "R-001_p6.webp"
+  },
+  {
+    "id": "EXB-001_p6",
+    "code": "EXB-001_p6",
+    "rarity": "C",
+    "name": "EX Base",
+    "level": "-",
+    "cost": "-",
+    "color": "-",
+    "cardType": "EX BASE",
+    "effect": "(At the start of the game, place 1 active EX Base into your shield area.)<br/>",
+    "zone": "-",
+    "trait": "-",
+    "link": "-",
+    "ap": "-",
+    "hp": "3",
+    "sourceTitle": "-",
+    "getIt": "Included in Booster Packs",
+    "set": {
+      "id": "included_in_booster_packs",
+      "name": "Included in Booster Packs"
+    },
+    "front_image": "EXB-001_p6.webp"
+  },
+  {
+    "id": "EXR-001_p6",
+    "code": "EXR-001_p6",
+    "rarity": "C",
+    "name": "EX Resource",
+    "level": "-",
+    "cost": "-",
+    "color": "-",
+    "cardType": "EX RESOURCE",
+    "effect": "(At the start of the game, the second-turn player places 1 active EX Resource into their resource area.)<br/>(Rest an EX Resource then remove it from the game when paying a cost.)<br/>",
+    "zone": "-",
+    "trait": "-",
+    "link": "-",
+    "ap": "-",
+    "hp": "-",
+    "sourceTitle": "-",
+    "getIt": "Included in Booster Packs",
+    "set": {
+      "id": "included_in_booster_packs",
+      "name": "Included in Booster Packs"
+    },
+    "front_image": "EXR-001_p6.webp"
+  }
+]
