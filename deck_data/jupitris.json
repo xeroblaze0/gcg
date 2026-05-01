@@ -1,0 +1,22 @@
+{
+	"name": "Jupitris",
+	"cards": [
+		{ "count": 3, "id": "GD03-013" },
+		{ "count": 4, "id": "GD01-008" },
+		{ "count": 2, "id": "GD03-012" },
+		{ "count": 3, "id": "GD03-008" },
+		{ "count": 3, "id": "ST01-001" },
+		{ "count": 2, "id": "GD03-001" },
+		{ "count": 3, "id": "GD03-003" },
+		{ "count": 4, "id": "GD03-002" },
+		{ "count": 4, "id": "GD01-118" },
+		{ "count": 2, "id": "GD03-104" },
+		{ "count": 3, "id": "ST01-014" },
+		{ "count": 1, "id": "GD03-101" },
+		{ "count": 4, "id": "GD03-123" },
+		{ "count": 1, "id": "ST08-015" },
+		{ "count": 3, "id": "GD03-087" },
+		{ "count": 4, "id": "ST01-010" },
+		{ "count": 4, "id": "GD03-084" }
+	]
+}

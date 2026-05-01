@@ -1,0 +1,444 @@
+[gd_scene load_steps=5 format=3 uid="uid://c028q1nk4h7af"]
+
+[ext_resource type="Script" uid="uid://dkfi7pylok34q" path="res://scenes/main_game/gcg_game.gd" id="1_gcggame"]
+[ext_resource type="PackedScene" uid="uid://c7u8hryloq7hy" path="res://addons/card-framework/card_manager.tscn" id="2_cardmgr"]
+[ext_resource type="PackedScene" uid="uid://dk6rb7lhv1ef6" path="res://addons/card-framework/pile.tscn" id="3_pile"]
+[ext_resource type="PackedScene" uid="uid://bkpjlq7ggckg6" path="res://addons/card-framework/hand.tscn" id="4_hand"]
+
+[node name="GcgGame" type="Node2D"]
+script = ExtResource("1_gcggame")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.08, 0.08, 0.12, 1)
+
+[node name="Table" type="ColorRect" parent="."]
+z_index = 10
+offset_left = 96.0
+offset_top = 54.0
+offset_right = 1824.0
+offset_bottom = 1026.0
+color = Color(0.13, 0.18, 0.13, 1)
+
+[node name="OpponentMat" type="ColorRect" parent="."]
+z_index = 20
+offset_left = 96.0
+offset_top = 54.0
+offset_right = 1824.0
+offset_bottom = 520.0
+color = Color(0.18, 0.18, 0.25, 0.6)
+
+[node name="PlayerMat" type="ColorRect" parent="."]
+z_index = 20
+offset_left = 96.0
+offset_top = 554.0
+offset_right = 1824.0
+offset_bottom = 1026.0
+color = Color(0.25, 0.18, 0.18, 0.6)
+
+[node name="OpponentCards" parent="." instance=ExtResource("2_cardmgr")]
+z_index = 30
+card_size = Vector2(100, 140)
+
+[node name="OpponentCommand" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 299.0
+offset_top = 199.0
+offset_right = 558.0
+offset_bottom = 493.0
+stack_display_gap = 10
+max_stack_display = 4
+sensor_size = Vector2(259, 294)
+
+[node name="OpponentHand" parent="OpponentCards" instance=ExtResource("4_hand")]
+offset_left = 485.0
+offset_top = 921.0
+offset_right = 1365.0
+offset_bottom = 1051.0
+max_hand_spread = 780
+hand_anchor = 1
+align_drop_zone_size_with_current_hand_size = false
+sensor_size = Vector2(880, 130)
+
+[node name="OpponentDeck" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 151.0
+offset_top = 360.0
+offset_right = 251.0
+offset_bottom = 500.0
+stack_display_gap = 0
+max_stack_display = 1
+allow_card_movement = false
+enable_drop_zone = false
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentExile" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 151.0
+offset_top = 220.0
+offset_right = 251.0
+offset_bottom = 360.0
+stack_display_gap = 0
+max_stack_display = 1
+allow_card_movement = false
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentTrash" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 151.0
+offset_top = 80.0
+offset_right = 251.0
+offset_bottom = 220.0
+stack_display_gap = 0
+max_stack_display = 1
+allow_card_movement = false
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentUnit_1" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 586.0
+offset_top = 360.0
+offset_right = 686.0
+offset_bottom = 500.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentUnit_2" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 696.0
+offset_top = 360.0
+offset_right = 796.0
+offset_bottom = 500.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentUnit_3" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 806.0
+offset_top = 360.0
+offset_right = 906.0
+offset_bottom = 500.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentUnit_4" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 916.0
+offset_top = 360.0
+offset_right = 1016.0
+offset_bottom = 500.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentUnit_5" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 1026.0
+offset_top = 360.0
+offset_right = 1126.0
+offset_bottom = 500.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentUnit_6" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 1136.0
+offset_top = 360.0
+offset_right = 1236.0
+offset_bottom = 500.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentResourceDeck" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 1136.0
+offset_top = 196.0
+offset_right = 1236.0
+offset_bottom = 336.0
+stack_display_gap = 0
+max_stack_display = 1
+allow_card_movement = false
+enable_drop_zone = false
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentResourceArea" parent="OpponentCards" instance=ExtResource("4_hand")]
+offset_left = 587.0
+offset_top = 195.0
+offset_right = 1236.0
+offset_bottom = 335.0
+max_hand_spread = 549
+hand_anchor = 1
+align_drop_zone_size_with_current_hand_size = false
+sensor_size = Vector2(649, 140)
+
+[node name="OpponentBase" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 1643.0
+offset_top = 360.0
+offset_right = 1743.0
+offset_bottom = 500.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentShield_1" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 1762.0
+offset_top = 68.0
+offset_right = 1862.0
+offset_bottom = 208.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentShield_2" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 1762.0
+offset_top = 104.0
+offset_right = 1862.0
+offset_bottom = 244.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentShield_3" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 1762.0
+offset_top = 140.0
+offset_right = 1862.0
+offset_bottom = 280.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentShield_4" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 1762.0
+offset_top = 176.0
+offset_right = 1862.0
+offset_bottom = 316.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentShield_5" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 1762.0
+offset_top = 212.0
+offset_right = 1862.0
+offset_bottom = 352.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="OpponentShield_6" parent="OpponentCards" instance=ExtResource("3_pile")]
+offset_left = 1762.0
+offset_top = 248.0
+offset_right = 1862.0
+offset_bottom = 388.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerCards" parent="." instance=ExtResource("2_cardmgr")]
+z_index = 30
+card_size = Vector2(100, 140)
+
+[node name="PlayerCommand" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 1317.0
+offset_top = 575.0
+offset_right = 1559.0
+offset_bottom = 877.0
+stack_display_gap = 10
+max_stack_display = 4
+sensor_size = Vector2(242, 302)
+
+[node name="PlayerBase" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 148.0
+offset_top = 572.0
+offset_right = 248.0
+offset_bottom = 712.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerShield_1" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 265.0
+offset_top = 727.0
+offset_right = 365.0
+offset_bottom = 867.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerShield_2" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 265.0
+offset_top = 763.0
+offset_right = 365.0
+offset_bottom = 903.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerShield_3" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 265.0
+offset_top = 799.0
+offset_right = 365.0
+offset_bottom = 939.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerShield_4" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 265.0
+offset_top = 835.0
+offset_right = 365.0
+offset_bottom = 975.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerShield_5" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 265.0
+offset_top = 871.0
+offset_right = 365.0
+offset_bottom = 1011.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerShield_6" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 265.0
+offset_top = 907.0
+offset_right = 365.0
+offset_bottom = 1047.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerUnit_1" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 591.0
+offset_top = 573.0
+offset_right = 691.0
+offset_bottom = 713.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerUnit_2" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 701.0
+offset_top = 573.0
+offset_right = 801.0
+offset_bottom = 713.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerUnit_3" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 811.0
+offset_top = 573.0
+offset_right = 911.0
+offset_bottom = 713.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerUnit_4" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 921.0
+offset_top = 573.0
+offset_right = 1021.0
+offset_bottom = 713.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerUnit_5" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 1031.0
+offset_top = 573.0
+offset_right = 1131.0
+offset_bottom = 713.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerUnit_6" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 1141.0
+offset_top = 573.0
+offset_right = 1241.0
+offset_bottom = 713.0
+stack_display_gap = 0
+max_stack_display = 1
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerResourceDeck" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 593.0
+offset_top = 735.0
+offset_right = 693.0
+offset_bottom = 875.0
+stack_display_gap = 0
+max_stack_display = 1
+allow_card_movement = false
+enable_drop_zone = false
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerResourceArea" parent="PlayerCards" instance=ExtResource("4_hand")]
+offset_left = 593.0
+offset_top = 735.0
+offset_right = 1243.0
+offset_bottom = 875.0
+max_hand_spread = 550
+hand_anchor = 1
+align_drop_zone_size_with_current_hand_size = false
+sensor_size = Vector2(650, 140)
+
+[node name="PlayerDeck" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 1643.0
+offset_top = 572.0
+offset_right = 1743.0
+offset_bottom = 712.0
+stack_display_gap = 0
+max_stack_display = 1
+allow_card_movement = false
+enable_drop_zone = false
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerExile" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 1643.0
+offset_top = 712.0
+offset_right = 1743.0
+offset_bottom = 852.0
+stack_display_gap = 0
+max_stack_display = 1
+allow_card_movement = false
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerTrash" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 1643.0
+offset_top = 852.0
+offset_right = 1743.0
+offset_bottom = 992.0
+stack_display_gap = 0
+max_stack_display = 1
+allow_card_movement = false
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerHand" parent="PlayerCards" instance=ExtResource("4_hand")]
+offset_left = 486.0
+offset_top = 27.0
+offset_right = 1366.0
+offset_bottom = 157.0
+max_hand_spread = 780
+hand_anchor = 1
+align_drop_zone_size_with_current_hand_size = false
+sensor_size = Vector2(880, 130)
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 40
+
+[node name="MenuButton" type="Button" parent="UI"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 130.0
+offset_bottom = 50.0
+text = "Menu"

@@ -14,3 +14,8 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Ignore scraped card data and images
+sets_data/**/*.webp
+# Or just ignore the whole folder if you don't even want the JSON pushing:
+sets_data/
