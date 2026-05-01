@@ -60,11 +60,15 @@ func new_game() -> void:
 	_shuffle(p2_deck)
 
 	# ── Opponent (AI – always keeps) ──────────────────────────────────────
-	_place_card(EX_BASE_ID, _opponent_base, true)
+	# NOTE: PlayerHand (y=27) is visually at the top = opponent area.
+	#       OpponentHand (y=921) is visually at the bottom = player area.
+	var opp_base_card := _place_card(EX_BASE_ID, _opponent_base, true)
+	if opp_base_card:
+		opp_base_card.rotation_degrees = 180  # upside-down from player's view
 	for i in range(6):
 		_place_card(p2_deck[i], _shield_node($OpponentCards, i + 1), false)
 	for i in range(6, 11):
-		_place_card(p2_deck[i], _opponent_hand, false)   # AI hand face-down
+		_place_card(p2_deck[i], _player_hand, false)   # _player_hand is visually at top
 	for i in range(11, p2_deck.size()):
 		_place_card(p2_deck[i], _opponent_deck, false)
 
@@ -74,6 +78,10 @@ func new_game() -> void:
 		_place_card(p1_deck[i], _shield_node($PlayerCards, i + 1), false)
 	_p1_hand_ids  = p1_deck.slice(6, 11)
 	_p1_remaining = p1_deck.slice(11)
+
+	# ── Resource decks (visual placeholder only) ─────────────────────────
+	_place_resource_deck($PlayerCards/PlayerResourceDeck)
+	_place_resource_deck($OpponentCards/OpponentResourceDeck)
 
 	_show_mulligan_popup()
 
@@ -89,7 +97,7 @@ func _show_mulligan_popup() -> void:
 
 func _on_keep_hand() -> void:
 	for id in _p1_hand_ids:
-		_place_card(id, _player_hand, true)
+		_place_card(id, _opponent_hand, true)  # _opponent_hand is visually at bottom = player area
 	for id in _p1_remaining:
 		_place_card(id, _player_deck, false)
 
@@ -105,10 +113,27 @@ func _on_mulligan() -> void:
 
 # ── Utility ───────────────────────────────────────────────────────────────
 
-func _place_card(card_id: String, container: Node, face_up: bool) -> void:
+func _place_card(card_id: String, container: Node, face_up: bool) -> Card:
 	var card := _factory.create_card(card_id, container as CardContainer)
 	if card:
 		card.show_front = face_up
+	return card
+
+
+func _place_resource_deck(pile: Node) -> void:
+	var resource_tex := load("res://sets_data/gundam-resource-back.png") as Texture2D
+	if resource_tex == null:
+		push_error("GcgGame: could not load gundam-resource-back.png")
+		return
+	var card := _factory.card_scene.instantiate() as GundamCard
+	if card == null:
+		return
+	card.card_size = _factory.card_size
+	var cc := pile as CardContainer
+	cc.cards_node.add_child(card)
+	cc.add_card(card)
+	card.set_faces(resource_tex, resource_tex)
+	card.show_front = false
 
 
 func _shield_node(manager: CardManager, index: int) -> Node:

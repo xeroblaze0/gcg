@@ -67,6 +67,7 @@ offset_right = 251.0
 offset_bottom = 500.0
 stack_display_gap = 0
 max_stack_display = 1
+card_face_up = false
 allow_card_movement = false
 enable_drop_zone = false
 sensor_size = Vector2(100, 140)
@@ -183,6 +184,7 @@ offset_bottom = 208.0
 rotation = 1.5708
 stack_display_gap = 0
 max_stack_display = 1
+card_face_up = false
 sensor_size = Vector2(100, 140)
 
 [node name="OpponentShield_2" parent="OpponentCards" instance=ExtResource("3_pile")]
@@ -193,6 +195,7 @@ offset_bottom = 244.0
 rotation = 1.5708
 stack_display_gap = 0
 max_stack_display = 1
+card_face_up = false
 sensor_size = Vector2(100, 140)
 
 [node name="OpponentShield_3" parent="OpponentCards" instance=ExtResource("3_pile")]
@@ -203,6 +206,7 @@ offset_bottom = 280.0
 rotation = 1.5708
 stack_display_gap = 0
 max_stack_display = 1
+card_face_up = false
 sensor_size = Vector2(100, 140)
 
 [node name="OpponentShield_4" parent="OpponentCards" instance=ExtResource("3_pile")]
@@ -213,6 +217,7 @@ offset_bottom = 316.0
 rotation = 1.5708
 stack_display_gap = 0
 max_stack_display = 1
+card_face_up = false
 sensor_size = Vector2(100, 140)
 
 [node name="OpponentShield_5" parent="OpponentCards" instance=ExtResource("3_pile")]
@@ -223,6 +228,7 @@ offset_bottom = 352.0
 rotation = 1.5708
 stack_display_gap = 0
 max_stack_display = 1
+card_face_up = false
 sensor_size = Vector2(100, 140)
 
 [node name="OpponentShield_6" parent="OpponentCards" instance=ExtResource("3_pile")]
@@ -233,6 +239,7 @@ offset_bottom = 388.0
 rotation = 1.5708
 stack_display_gap = 0
 max_stack_display = 1
+card_face_up = false
 sensor_size = Vector2(100, 140)
 
 [node name="PlayerCards" parent="." instance=ExtResource("2_cardmgr")]
@@ -257,44 +264,15 @@ stack_display_gap = 0
 max_stack_display = 1
 sensor_size = Vector2(100, 140)
 
-[node name="PlayerShield_1" parent="PlayerCards" instance=ExtResource("3_pile")]
+[node name="PlayerShield_6" parent="PlayerCards" instance=ExtResource("3_pile")]
 offset_left = 265.0
-offset_top = 727.0
+offset_top = 907.0
 offset_right = 365.0
-offset_bottom = 867.0
+offset_bottom = 1047.0
 rotation = 1.5708
 stack_display_gap = 0
 max_stack_display = 1
-sensor_size = Vector2(100, 140)
-
-[node name="PlayerShield_2" parent="PlayerCards" instance=ExtResource("3_pile")]
-offset_left = 265.0
-offset_top = 763.0
-offset_right = 365.0
-offset_bottom = 903.0
-rotation = 1.5708
-stack_display_gap = 0
-max_stack_display = 1
-sensor_size = Vector2(100, 140)
-
-[node name="PlayerShield_3" parent="PlayerCards" instance=ExtResource("3_pile")]
-offset_left = 265.0
-offset_top = 799.0
-offset_right = 365.0
-offset_bottom = 939.0
-rotation = 1.5708
-stack_display_gap = 0
-max_stack_display = 1
-sensor_size = Vector2(100, 140)
-
-[node name="PlayerShield_4" parent="PlayerCards" instance=ExtResource("3_pile")]
-offset_left = 265.0
-offset_top = 835.0
-offset_right = 365.0
-offset_bottom = 975.0
-rotation = 1.5708
-stack_display_gap = 0
-max_stack_display = 1
+card_face_up = false
 sensor_size = Vector2(100, 140)
 
 [node name="PlayerShield_5" parent="PlayerCards" instance=ExtResource("3_pile")]
@@ -305,16 +283,51 @@ offset_bottom = 1011.0
 rotation = 1.5708
 stack_display_gap = 0
 max_stack_display = 1
+card_face_up = false
 sensor_size = Vector2(100, 140)
 
-[node name="PlayerShield_6" parent="PlayerCards" instance=ExtResource("3_pile")]
+[node name="PlayerShield_4" parent="PlayerCards" instance=ExtResource("3_pile")]
 offset_left = 265.0
-offset_top = 907.0
+offset_top = 835.0
 offset_right = 365.0
-offset_bottom = 1047.0
+offset_bottom = 975.0
 rotation = 1.5708
 stack_display_gap = 0
 max_stack_display = 1
+card_face_up = false
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerShield_3" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 265.0
+offset_top = 799.0
+offset_right = 365.0
+offset_bottom = 939.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+card_face_up = false
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerShield_2" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 265.0
+offset_top = 763.0
+offset_right = 365.0
+offset_bottom = 903.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+card_face_up = false
+sensor_size = Vector2(100, 140)
+
+[node name="PlayerShield_1" parent="PlayerCards" instance=ExtResource("3_pile")]
+offset_left = 265.0
+offset_top = 727.0
+offset_right = 365.0
+offset_bottom = 867.0
+rotation = 1.5708
+stack_display_gap = 0
+max_stack_display = 1
+card_face_up = false
 sensor_size = Vector2(100, 140)
 
 [node name="PlayerUnit_1" parent="PlayerCards" instance=ExtResource("3_pile")]
@@ -399,6 +412,7 @@ offset_right = 1743.0
 offset_bottom = 712.0
 stack_display_gap = 0
 max_stack_display = 1
+card_face_up = false
 allow_card_movement = false
 enable_drop_zone = false
 sensor_size = Vector2(100, 140)
@@ -429,6 +443,7 @@ offset_top = 27.0
 offset_right = 1366.0
 offset_bottom = 157.0
 max_hand_spread = 780
+card_face_up = false
 hand_anchor = 1
 align_drop_zone_size_with_current_hand_size = false
 sensor_size = Vector2(880, 130)
